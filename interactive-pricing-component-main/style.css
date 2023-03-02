@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Open+Sans&display=swap');
+
+body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+
+}
+
+.container{
+    margin: 0;
+    background-color: hsl(224, 65%, 95%);
+    height: 53vh;
+    width: 100%;
+    border-radius: 0 0 0 200px;
+
+}
+
+#intro{
+    position: absolute;
+    top: 10vh;
+    left: 37vw;
+    text-align: center;
+
+}
+.circle{
+
+    border-radius: 50%;
+    border: solid 1px hsl(225, 20%, 60%);
+    position: absolute;
+
+}
+
+.big{
+    width: 8vw;
+    height: 8vw;
+    top: 10vh;
+    left: 45vw;
+}
+
+.small{
+    width: 6vw;
+    height: 6vw;
+    top: 8vh;
+    left: 50vw;
+}
+#views{
+    text-align: left;
+    padding: 15%;
+    color: hsl(225, 20%, 60%);
+    font-weight: 600;
+    letter-spacing: 0.05cm;
+    display: inline-block;
+}
+
+#price{
+    display: inline;
+    float: right;
+
+}
+
+#discount-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    left: 30vw;
+    top: 30vh;
+    box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.2), 
+    2px 2px 4px rgba(255, 255, 255, 0.4);
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 25px;
+    text-align: center; 
+    
+}
+
+#card-footer{
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15%;
+}
+
+#card-footer > div > div{
+    height: 5vh;
+    text-align: left;
+}
+
+#card-footer > div > div > p {
+    display: inline;
+    margin-left: 1vw;
+    color: hsl(227, 35%, 25%);
+}
+
+#start-button{
+    position: relative;
+    top: 20%;
+    background-color: hsl(227, 35%, 25%);
+    color: white;
+    width: 80%;
+    height: 5vh;
+    border: none;
+    border-radius: 25px;
+}
+#price{
+    padding: 5%;
+}
+#priceNo{
+    font-weight: 800;
+    font-size: 32px;
+    
+}
+
+#slider-container{
+    width: 100%;
+    grid-column: span 2;
+}
+
+.slider{
+    overflow: hidden;
+    width: 80%; 
+    height: 20px; 
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: 0px 15px 40px #7E6D5766;
+    background: hsl(225, 20%, 60%); 
+  -webkit-appearance:none !important;
+    color: hsl(174, 86%, 45%);
+    border: none;
+    outline: none;
+
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+    /* height: 10px; */
+    -webkit-appearance: none;
+    color: #13bba4;
+    margin-top: -1px;
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    padding: 0;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #13bba4;
+    background-image: url("./images/icon-slider.svg") ;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background-color: hsl(174, 86%, 45);
+    box-shadow: -500px 0 0 500px hsl(174, 86%, 45%);
+  }
+#toggle{
+    grid-column: span 2;
+    /* width: 50vw; */
+    width: 100%;
+    position: relative;
+    top: 5vh;
+    text-align: center;
+}
+#discount{
+    background-color: hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+    padding: 5px;
+}
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .toggle-slider {
+    background-color: hsl(174, 86%, 45%)
+  }
+  
+  input:focus + .toggle-slider {
+    box-shadow: 0 0 1px hsl(174, 86%, 45%)
+  }
+  
+  input:checked + .toggle-slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded toggle-sliders */
+  .toggle-slider.round {
+    border-radius: 34px;
+  }
+  
+  .toggle-slider.round:before {
+    border-radius: 50%;
+  }
+
+
+

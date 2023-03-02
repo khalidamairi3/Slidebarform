@@ -5,35 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Interactive pricing component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+  <div class="container">
 
-  Pageviews
-  $ /month
+    <div class="circle big"></div>
+    <div class="circle small"></div>
+    <div id="intro">
 
-  Monthly Billing
-  Yearly Billing 25% discount
+      <h1>Simple, traffic-based pricing</h1>
+      <p> Sign-up for our 30-day trial. No credit card required</p>
 
-  Unlimited websites
-  100% data ownership
-  Email reports
 
-  Start my trial
+    </div>
+
+   
+    </div>
+
+    <div id="discount-card">
+      <div id="views">
+        <span id="viewsNo"> 100 </span>K PAGEVIEWS 
+      </div>
+      <div id="price">
+        <p><span id="priceNo">$16.00</span>/month </p>
+      </div>
+      <div id="slider-container">
+
+        <!-- <range-slider min="0" max="100" step="1" dir="rtl"></range-slider> -->
+        <input type="range" class="slider" in="0" max="200" value="100" oninput="viewsNo.innerText = this.value; priceNo.innerText='$'+(this.value * 0.16).toFixed(2) ">
+
+      </div>
+
+      
+      <div id="toggle">
+        Monthly Billing
+        <label class="switch">    
+          <input type="checkbox">
+          <span class="toggle-slider round"> </span>
+        </label>
+        Yearly Billing
+        <span id="discount"> 25% discount</span>
+      </div>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+
+      <div id="card-footer">
+        <div>
+          <div> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/> </svg>
+            <p>Unlimited websites</p>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
+            <p> 100% data ownership </p>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8"><path fill="none" stroke="#10D8C4" stroke-width="2" d="M1 4.134l1.907 1.908L7.949 1"/></svg>
+            <p> Email reports </p>
+          </div>
+        </div>
+        <div id="button-container">
+          <button id="start-button">
+            Start my trial
+          </button>
+
+        </div>
+
+  
+      </div>
+
   </div>
+
+  
+  
+
+
+
+  <script src="app.js"></script>
 </body>
 </html>
