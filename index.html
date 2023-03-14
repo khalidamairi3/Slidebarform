@@ -32,7 +32,7 @@
 
     <div id="discount-card">
       <div id="views">
-        <span id="viewsNo"> 100 </span>K PAGEVIEWS 
+        <span id="viewsNo"> 100K </span> PAGEVIEWS 
       </div>
       <div id="price">
         <p><span id="priceNo">$16.00</span>/month </p>
@@ -40,7 +40,14 @@
       <div id="slider-container">
 
         <!-- <range-slider min="0" max="100" step="1" dir="rtl"></range-slider> -->
-        <input type="range" class="slider" in="0" max="200" value="100" oninput="viewsNo.innerText = this.value; priceNo.innerText='$'+(this.value * 0.16).toFixed(2) ">
+        <input type="range" id="slider" class="slider" in="0" max="1000" step="1" value="500"  list="range-options"> 
+        <datalist id="range-options"> 
+            <option value="10"></option>
+            <option value="50"></option>
+            <option value="100"></option>
+            <option value="500"></option>
+            <option value="1000"></option>
+        </datalist>
 
       </div>
 
@@ -48,7 +55,7 @@
       <div id="toggle">
         Monthly Billing
         <label class="switch">    
-          <input type="checkbox">
+          <input type="checkbox" id="toggle-checkbox">
           <span class="toggle-slider round"> </span>
         </label>
         Yearly Billing
